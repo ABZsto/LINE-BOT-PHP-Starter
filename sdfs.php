@@ -1,4 +1,22 @@
 <?php
+{
+  "events": [
+      {
+        "replyToken": "u8b4544c027253be2993f7b87f058124c",
+        "type": "message",
+        "timestamp": 1519190751,
+        "source": {
+             "type": "user",
+             "userId": "u8b4544c027253be2993f7b87f058124c"
+         },
+         "message": {
+             "id": "1519190751",
+             "type": "text",
+             "text": "Hello, world"
+          }
+      }
+  ]
+}
 
 $access_token = 'K1IWohnjcPI3OZ9l4IeYz9YT5plWDTv9g9VmPN08PdJD7pbyv+GRzVeI7zl4WVlpf/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPdd7hgK+rKQxLk8ZjkMrZJ8SCTZf/MORouXmLm++jdH8gdB04t89/1O/w1cDnyilFU=';
 
@@ -13,7 +31,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = $event['message']['text'];
+			$text = "สวัสดี"//$event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
