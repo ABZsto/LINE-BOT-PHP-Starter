@@ -3,7 +3,7 @@ curl -X POST \
 -H 'Content-Type:application/json' \
 -H 'Authorization: Bearer 3HXZA6OLw8b6CRXO7XP/2MejydjIdz/W6LKxpf3gMnT9KDgcP/SBjL+tWOKr6BxBf/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPfSrr6xJngznmpABi5q4OB2xO+xNj2FhLFPUMQisaGgVwdB04t89/1O/w1cDnyilFU=' \
 -d '{
-    "replyToken":"nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
+    "replyToken":"u8b4544c027253be2993f7b87f058124c",
     "messages":[
         {
             "type":"text",
