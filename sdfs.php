@@ -2,7 +2,7 @@
 {
   "events": [
       {
-        "replyToken": "u8b4544c027253be2993f7b87f058124c",
+        "replyToken": "Uc256b7e100b0ad95ecc9140fea984eae",
         "type": "message",
         "timestamp": 1519190751,
         "source": {
