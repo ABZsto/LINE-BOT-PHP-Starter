@@ -1,4 +1,7 @@
 <?php
+curl -X POST \
+-H 'Content-Type:application/json' \
+-H 'Authorization: Bearer Gmd8dwuuvkVewGzaq0xk8lqrl4rZV/wAv4ZQM97mJcitjItN21gXY43XLxFchH30f/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPdrxdKIC3ddPZYYkUsaUhx0MTe8ENVM6t4+FEJLKEpibAdB04t89/1O/w1cDnyilFU=' \
 {
   "events": [
       {
