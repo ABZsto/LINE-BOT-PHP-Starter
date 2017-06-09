@@ -2,22 +2,22 @@
 {
   "events": [
       {
-        "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
+        "replyToken": "u8b4544c027253be2993f7b87f058124c",
         "type": "message",
-        "timestamp": 1462629479859,
+        "timestamp": 1519190751,
         "source": {
              "type": "user",
              "userId": "U206d25c2ea6bd87c17655609a1c37cb8"
          },
          "message": {
-             "id": "325708",
+             "id": "1519190751",
              "type": "text",
              "text": "Hello, world"
           }
       }
   ]
 }
-$access_token = '3HXZA6OLw8b6CRXO7XP/2MejydjIdz/W6LKxpf3gMnT9KDgcP/SBjL+tWOKr6BxBf/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPfSrr6xJngznmpABi5q4OB2xO+xNj2FhLFPUMQisaGgVwdB04t89/1O/w1cDnyilFU=';
+$access_token = 'Gmd8dwuuvkVewGzaq0xk8lqrl4rZV/wAv4ZQM97mJcitjItN21gXY43XLxFchH30f/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPdrxdKIC3ddPZYYkUsaUhx0MTe8ENVM6t4+FEJLKEpibAdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
 $content = file_get_contents('php://input');
