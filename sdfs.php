@@ -18,9 +18,7 @@
   ]
 }
 
-$access_token = 'K1IWohnjcPI3OZ9l4IeYz9YT5plWDTv9g9VmPN08PdJD7pbyv+GRzVeI7zl4WVlpf/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPdd7hgK+rKQxLk8ZjkMrZJ8SCTZf/MORouXmLm++jdH8gdB04t89/1O/w1cDnyilFU=';
-
-// Get POST body content
+$access_token = '3HXZA6OLw8b6CRXO7XP/2MejydjIdz/W6LKxpf3gMnT9KDgcP/SBjL+tWOKr6BxBf/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPfSrr6xJngznmpABi5q4OB2xO+xNj2FhLFPUMQisaGgVwdB04t89/1O/w1cDnyilFU=';
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
