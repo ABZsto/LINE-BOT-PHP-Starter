@@ -1,24 +1,23 @@
 <?php
-$access_token = '3HXZA6OLw8b6CRXO7XP/2MejydjIdz/W6LKxpf3gMnT9KDgcP/SBjL+tWOKr6BxBf/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPfSrr6xJngznmpABi5q4OB2xO+xNj2FhLFPUMQisaGgVwdB04t89/1O/w1cDnyilFU=';
 {
   "events": [
       {
-        "replyToken": "Uc256b7e100b0ad95ecc9140fea984eae",
+        "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
         "type": "message",
-        "timestamp": 1519190751,
+        "timestamp": 1462629479859,
         "source": {
              "type": "user",
-             "userId": "u8b4544c027253be2993f7b87f058124c"
+             "userId": "U206d25c2ea6bd87c17655609a1c37cb8"
          },
          "message": {
-             "id": "1519190751",
+             "id": "325708",
              "type": "text",
              "text": "Hello, world"
           }
       }
   ]
 }
-
+$access_token = '3HXZA6OLw8b6CRXO7XP/2MejydjIdz/W6LKxpf3gMnT9KDgcP/SBjL+tWOKr6BxBf/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPfSrr6xJngznmpABi5q4OB2xO+xNj2FhLFPUMQisaGgVwdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
 $content = file_get_contents('php://input');
