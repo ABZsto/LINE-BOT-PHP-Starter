@@ -1,5 +1,8 @@
 <?php
 echo"anuchid";
+curl -X POST \
+-H 'Content-Type:application/json' \
+-H 'Authorization: Bearer {ENTER_ACCESS_TOKEN}' \
 {
   "events": [
       {
