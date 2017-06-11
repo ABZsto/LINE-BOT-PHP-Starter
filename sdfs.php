@@ -1,21 +1,17 @@
 <?php
 echo"anuchid";
-curl -X POST \
--H 'Content-Type:application/json' \
--H 'Authorization: Bearer {ENTER_ACCESS_TOKEN}' \
 {
   "events": [
       {
-        "replyToken": "u8b4544c027253be2993f7b87f058124c",
+        "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
         "type": "message",
-        "timestamp": 1519190751,
+        "timestamp": 1462629479859,
         "source": {
              "type": "user",
-             "userId": "	
-Uc256b7e100b0ad95ecc9140fea984eae"
+             "userId": "U206d25c2ea6bd87c17655609a1c37cb8"
          },
          "message": {
-             "id": "1519190751",
+             "id": "325708",
              "type": "text",
              "text": "Hello, world"
           }
