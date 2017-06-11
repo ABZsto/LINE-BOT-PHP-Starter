@@ -1,7 +1,4 @@
 <?php
-curl -X POST \
--H 'Content-Type:application/json' \
--H 'Authorization: Bearer Gmd8dwuuvkVewGzaq0xk8lqrl4rZV/wAv4ZQM97mJcitjItN21gXY43XLxFchH30f/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPdrxdKIC3ddPZYYkUsaUhx0MTe8ENVM6t4+FEJLKEpibAdB04t89/1O/w1cDnyilFU=' \
 {
   "events": [
       {
@@ -21,7 +18,7 @@ Uc256b7e100b0ad95ecc9140fea984eae"
       }
   ]
 }
-$access_token = 'Gmd8dwuuvkVewGzaq0xk8lqrl4rZV/wAv4ZQM97mJcitjItN21gXY43XLxFchH30f/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPdrxdKIC3ddPZYYkUsaUhx0MTe8ENVM6t4+FEJLKEpibAdB04t89/1O/w1cDnyilFU=';
+$access_token = 'OiCgsPiq2xxMp6Q/XzuTDXKSrW6dD1KiexayhVCEsIVKln6SnhKrmmPNWSvOJwjef/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPe3r6etkqLmVXjXqneWyg2CBzjTNciCT+u7n4x7c7ZrKAdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
 $content = file_get_contents('php://input');
