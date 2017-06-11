@@ -1,23 +1,4 @@
 <?php
-echo"anuchid";
-{
-  "events": [
-      {
-        "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
-        "type": "message",
-        "timestamp": 1462629479859,
-        "source": {
-             "type": "user",
-             "userId": "U206d25c2ea6bd87c17655609a1c37cb8"
-         },
-         "message": {
-             "id": "325708",
-             "type": "text",
-             "text": "Hello, world"
-          }
-      }
-  ]
-}
 $access_token = 'OiCgsPiq2xxMp6Q/XzuTDXKSrW6dD1KiexayhVCEsIVKln6SnhKrmmPNWSvOJwjef/DAcu2q/nJqh6IAXS9JYER5MHAhX4RtDyKgg8AOfPe3r6etkqLmVXjXqneWyg2CBzjTNciCT+u7n4x7c7ZrKAdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
