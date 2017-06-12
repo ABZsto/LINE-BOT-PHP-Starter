@@ -6,6 +6,14 @@ $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
  
 $strUrl = "https://api.line.me/v2/bot/message/reply";
+
+function extract_int($str){  
+    $str=str_replace(",","",$str);
+     preg_match('/[[:digit:]]+\.?[[:digit:]]*/', $str, $regs);  
+     return (doubleval($regs[0]));  
+}   
+$a="สินค้านี้ราคา 4,500.25 บาท   ";  
+echo extract_int($a);
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
