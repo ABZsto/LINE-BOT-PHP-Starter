@@ -38,8 +38,8 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 }
   else if($arrJson['events'][0]['message']['text'] == "ได้เท่าไหร่"){
-  extract_int($arrJson);
   $arrPostData = array();
+  $arrPostData = extract_int($arrJson);
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ได้",":".($str+$regs);
