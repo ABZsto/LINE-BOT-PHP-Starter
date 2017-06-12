@@ -10,8 +10,9 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 function extract_int($str){  
     $str=str_replace(",","",$str);
      preg_match('/[[:digit:]]+\.?[[:digit:]]*/', $str, $regs);  
-     return (doubleval($regs[0]));  
+     return (doubleval($regs[0])); 
 }     
+$num = extract_int($arrJson);
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
@@ -37,7 +38,7 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 }
-  else if($arrJson['events'][0]['message']['text'] == extract_int($arrJson)){
+  else if($arrJson['events'][0]['message']['text'] == "="){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
