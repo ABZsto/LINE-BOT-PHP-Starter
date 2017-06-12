@@ -52,6 +52,12 @@ else if($arrJson['events'][0]['message']['text']){
            $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
            $arrPostData['messages'][0]['type'] = "text";
            $arrPostData['messages'][0]['text'] = "ได้แล้ว".($element);
+        }else
+        {
+          $arrPostData = array();
+          $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+          $arrPostData['messages'][0]['type'] = "text";
+          $arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
         }
       }
 }
