@@ -44,11 +44,16 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 }
-  else if($arrJson['events'][0]['message']['text'] == "="){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ได้ ";
+else if(($arrJson['events'][0]['message']['type'] == 'message' && ['events'][0]['message']['type'] == 'text'){
+    $arr = str_split($arrJson);
+foreach ($arr as $element) {
+    if (is_numeric($element)) {
+           $arrPostData = array();
+           $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+           $arrPostData['messages'][0]['type'] = "text";
+           $arrPostData['messages'][0]['text'] = "".($element);
+          echo "{$element}", PHP_EOL;
+        }
  
 }
 else{
