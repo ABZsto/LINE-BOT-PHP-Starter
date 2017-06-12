@@ -46,7 +46,7 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ได้ ".($num1+$num2);
+  $arrPostData['messages'][0]['text'] = "ได้ "/*.($num1+$num2)*/;
  
 }
 else{
