@@ -17,6 +17,8 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 //$num1=str_split($arrJson);
 //$num2=str_split($arrJson,1);
 //$operator=str_split($arrJson,2)
+//=====================================================================//
+//====================================================================//
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
@@ -43,10 +45,16 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 }
   else if($arrJson['events'][0]['message']['text'] == "="){
+$arr = str_split($arrJson );
+foreach ($arr as $element) {
+    if (is_numeric($element)) {
+          echo "{$element}", PHP_EOL;
+        } else{} 
+}
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ได้ "/*.($num1+$num2)*/;
+  $arrPostData['messages'][0]['text'] = "ได้ ".;
  
 }
 else{
