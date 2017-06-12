@@ -14,9 +14,9 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 //}     
 //$num = extract_int($arrJson);
 
-$num1=str_split($arrJson);
-$num2=str_split($arrJson,1);
-$operator=str_split($arrJson,2)
+//$num1=str_split($arrJson);
+//$num2=str_split($arrJson,1);
+//$operator=str_split($arrJson,2)
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
