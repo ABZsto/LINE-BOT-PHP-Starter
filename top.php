@@ -12,7 +12,6 @@ function extract_int($str){
      preg_match('/[[:digit:]]+\.?[[:digit:]]*/', $str, $regs);  
      return (doubleval($regs[0]));  
 }     
-echo extract_int($arrJson);
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
@@ -39,6 +38,7 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 }
   else if($arrJson['events'][0]['message']['text'] == "ได้เท่าไหร่"){
+  extract_int($arrJson);
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
