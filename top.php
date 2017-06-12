@@ -13,8 +13,8 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
      //return (doubleval($regs[0]));  
 //}     
 //echo extract_int($arrJson);
-$str=1
-$regs=2
+$str=1;
+$regs=2;
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
@@ -44,7 +44,7 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ได้".[$str+$regs];
+  $arrPostData['messages'][0]['text'] = "ได้".($str+$regs);
  
 }
 else{
