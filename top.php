@@ -34,7 +34,7 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   else if($arrJson['events'][0]['message']['text'] == "ได้เท่าไหร่"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "is_integer()";
+  $arrPostData['messages'][0]['type'] = "text()";
   $arrPostData['messages'][0]['text'] = "ได้";
  
 }
