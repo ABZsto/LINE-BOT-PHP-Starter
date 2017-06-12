@@ -45,15 +45,14 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
 }
 else if($arrJson['events'][0]['message']['text'] == "12ss"){
-      $arr = str_split($arrJson['events'][0]['message']['text']);
-      foreach ($arr as $element) {
+      foreach ($arrJson as $element) {
         if (is_numeric($element)) {
            $arrPostData = array();
            $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
            $arrPostData['messages'][0]['type'] = "text";
            $arrPostData['messages'][0]['text'] = "".($element);
         }
-
+ 
  
 }
 else{
