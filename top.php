@@ -7,12 +7,16 @@ $arrJson = json_decode($content, true);
  
 $strUrl = "https://api.line.me/v2/bot/message/reply";
 
-function extract_int($str){  
-    $str=str_replace(",","",$str);
-     preg_match('/[[:digit:]]+\.?[[:digit:]]*/', $str, $regs);  
-     return (doubleval($regs[0])); 
-}     
-$num = extract_int($arrJson);
+//function extract_int($str){  
+    //$str=str_replace(",","",$str);
+     //preg_match('/[[:digit:]]+\.?[[:digit:]]*/', $str, $regs);  
+     //return (doubleval($regs[0])); 
+//}     
+//$num = extract_int($arrJson);
+
+$num1=str_split($arrJson,1);
+$or=;
+$num2=;
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
