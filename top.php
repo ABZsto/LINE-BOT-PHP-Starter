@@ -60,6 +60,16 @@ else if($arrJson['events'][0]['message']['text'] == "image"){
   $arrPostData['messages'][0]['originalContentUrl'] = "https://github.com/ABZsto/LINE-BOT-PHP-Starter/blob/master/src/pic/1234.jpg";
   $arrPostData['messages'][0]['previewImageUrl'] ="https://github.com/ABZsto/LINE-BOT-PHP-Starter/blob/master/src/pic/1234.jpg";
   }
+
+  else if($arrJson['events'][0]['message']['text'] == "location"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "location";
+  $arrPostData['messages'][0]['title'] = "my location";
+  $arrPostData['messages'][0]['address'] = "เซนทรัลแจ้ง";
+  $arrPostData['messages'][0]['latitude'] ="13.90363";
+  $arrPostData['messages'][0]['longitude'] ="100.52810";
+  }
 //else if($arrJson['events'][0]['message']['text']){
  // $arr = str_split($arrJson['events'][0]['message']['text']);
       //foreach ($arr as $element) {
