@@ -57,7 +57,7 @@ else if($arrJson['events'][0]['message']['text'] == "image"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['originalContentUrl'] = "https://f.ptcdn.info/676/023/000/1411300343-IMG8271-o.jpg";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://github.com/ABZsto/LINE-BOT-PHP-Starter/blob/master/src/cr2016v4.jpg";
   }
 //else if($arrJson['events'][0]['message']['text']){
  // $arr = str_split($arrJson['events'][0]['message']['text']);
