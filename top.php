@@ -19,10 +19,63 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 //$operator=str_split($arrJson,2)
 //=====================================================================//
 //====================================================================//
+
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
+
+$_msg = $arrJson['events'][0]['messages']['text'];
+
+$api_key = "Uc256b7e100b0ad95ecc9140fea984eae";
+$url = 'https://api.mlab.com/api/1/databases/linebot/collections/linebottt?apiKey='.$api_key.'';
+$json = file_get_contents('https://api.mlab.com/api/1/databases/linebot/collections/linebottt?apiKey='.$api_key.'&q={"question":"'.$_msg.'"}');
+$data = json_decode($json);
+$isData=sizeof($data);
+
+if (strpos($_msg, 'สอนเป็ด') !== false) {
+  if (strpos($_msg, 'สอนเป็ด') !== false) {
+    $x_tra = str_replace("สอนเป็ด","", $_msg);
+    $pieces = explode("|", $x_tra);
+    $_question=str_replace("[","",$pieces[0]);
+    $_answer=str_replace("]","",$pieces[1]);
+    //Post New Data
+    $newData = json_encode(
+      array(
+        'question' => $_question,
+        'answer'=> $_answer
+      )
+    );
+    $opts = array(
+      'http' => array(
+          'method' => "POST",
+          'header' => "Content-type: application/json",
+          'content' => $newData
+       )
+    );
+    $context = stream_context_create($opts);
+    $returnValue = file_get_contents($url,false,$context);
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = 'ขอบคุณที่สอนเป็ด';
+  }
+}else{
+  if($isData >0){
+   foreach($data as $rec){
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = $rec->answer;
+   }
+  }else{
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = 'ก๊าบบ คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: สอนเป็ด[คำถาม|คำตอบ]';
+  }
+}
+
  
 if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
