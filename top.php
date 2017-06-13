@@ -58,7 +58,7 @@ else if($arrJson['events'][0]['message']['text'] == "image"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://github.com/ABZsto/LINE-BOT-PHP-Starter/blob/master/src/cr.jpg";
-  $arrPostData['messages'][0]['previewImageUrl'] ="https://github.com/ABZsto/LINE-BOT-PHP-Starter/blob/master/src/cr.jpg";
+ //$arrPostData['messages'][0]['previewImageUrl'] ="https://github.com/ABZsto/LINE-BOT-PHP-Starter/blob/master/src/cr.jpg";
 
   }
 //else if($arrJson['events'][0]['message']['text']){
