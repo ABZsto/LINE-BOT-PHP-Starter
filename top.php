@@ -43,11 +43,13 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
+ 
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
   $arrPostData = array();
-$arrPostData['messages'][0]['type'] = "sticker";
- $arrPostData['messages'][0]['sticker'] ="packageId":"1";
-  $arrPostData['messages'][0]['packageId']="stickerId": "1";
+  $arrPostData['messages'][0]['type'] = "sticker";
+ $arrPostData['messages'][0]['packageId']="1";
+  $arrPostData['messages'][0]['sticker'] ="1";
+  
 }
 //else if($arrJson['events'][0]['message']['text']){
  // $arr = str_split($arrJson['events'][0]['message']['text']);
