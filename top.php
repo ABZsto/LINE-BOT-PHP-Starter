@@ -100,9 +100,9 @@ else if($arrJson['events'][0]['message']['text'] == "Image"){
 else if (strpos($_msg, 'จดจำ') !== false) {
   if (strpos($_msg, 'จดจำ') !== false) {
     $x_tra = str_replace("จดจำ","", $_msg);
-    $pieces = explode("|", $x_tra);
-    $_question=str_replace("[","",$pieces[0]);
-    $_answer=str_replace("]","",$pieces[1]);
+    $pieces = explode(":", $x_tra);
+    $_question=str_replace("(","",$pieces[0]);
+    $_answer=str_replace(")","",$pieces[1]);
     //Post New Data
     $newData = json_encode(
       array(
@@ -137,7 +137,7 @@ else if (strpos($_msg, 'จดจำ') !== false) {
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = 'คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: จดจำ[คำถาม|คำตอบ]';
+    $arrPostData['messages'][0]['text'] = 'คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: จดจำ(คำถาม:คำตอบ)';
   }
 }
 
