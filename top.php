@@ -25,7 +25,7 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 
-$_msg = $arrJson['events'][0]['messages']['text'];
+$_msg =$arrJson['events'][0]['message']['text'];
 
 $api_key = "Uc256b7e100b0ad95ecc9140fea984eae";
 $url = 'https://api.mlab.com/api/1/databases/linebot/collections/linebottt?apiKey='.$api_key.'';
@@ -97,8 +97,7 @@ else if($arrJson['events'][0]['message']['text'] == "Image"){
         //}
       //}
 //}
-else{
-  if (strpos($_msg, 'สอนเป็ด') !== false) {
+else if (strpos($_msg, 'สอนเป็ด') !== false) {
   if (strpos($_msg, 'สอนเป็ด') !== false) {
     $x_tra = str_replace("สอนเป็ด","", $_msg);
     $pieces = explode("|", $x_tra);
@@ -140,7 +139,7 @@ else{
     $arrPostData['messages'][0]['text'] = 'ก๊าบบ คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: สอนเป็ด[คำถาม|คำตอบ]';
   }
 }
-}
+
  
  
 $ch = curl_init();
@@ -153,6 +152,6 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
-echo "่ผ่าน";
+echo "ผ่าน";
  
 ?>
