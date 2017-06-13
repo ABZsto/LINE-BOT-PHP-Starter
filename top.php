@@ -66,7 +66,7 @@ else if($arrJson['events'][0]['message']['text'] == "image"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "location";
   $arrPostData['messages'][0]['title'] = "my location";
-  $arrPostData['messages'][0]['address'] = "เซนทรัลแจ้ง";
+  $arrPostData['messages'][0]['address'] = "เลขที่ 99/9 หมู่ 2 ซอย แจ้งวัฒนะ-ปากเกร็ด 19 อำเภอปากเกร็ด, ตำบลบางตลาด, นนทบุรี 11120";
   $arrPostData['messages'][0]['latitude'] ="13.90363";
   $arrPostData['messages'][0]['longitude'] ="100.52810";
   }
