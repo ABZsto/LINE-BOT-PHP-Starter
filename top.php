@@ -44,10 +44,10 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
  
-}else if($arrJson['events'][0]['message']['sticker']){
+}else if($arrJson['events'][0]['message']['sticker'] == 'sticker'){
   $arrPostData = array();
   $arrPostData['messages'][0]['type'] = "sticker";
- $arrPostData['messages'][0]['packageId']="1";
+  $arrPostData['messages'][0]['packageId']="1";
   $arrPostData['messages'][0]['sticker'] ="1";
   
 }
