@@ -48,7 +48,7 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData = array();
   $arrPostData['messages'][0]['type'] = "sticker";
   $arrPostData['messages'][0]['packageId']="1";
-  $arrPostData['messages'][0]['sticker'] ="1";
+  $arrPostData['messages'][0]['stickerId'] ="1";
   
 }
 //else if($arrJson['events'][0]['message']['text']){
