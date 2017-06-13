@@ -136,7 +136,7 @@ else if (strpos($_msg, 'สอน') !== false) {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = 'เ?? คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: สอน[คำถาม|คำตอบ]';
+    $arrPostData['messages'][0]['text'] = '?? คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: สอน[คำถาม|คำตอบ]';
   }
 }
 
