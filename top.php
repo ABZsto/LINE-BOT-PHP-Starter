@@ -45,7 +45,7 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
  
 }
-else if($arrJson['events'][0]['message']['text'] == "ส่ง"){
+else if($arrJson['events'][0]['message']['text'] == "striker"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "sticker";
@@ -53,6 +53,13 @@ else if($arrJson['events'][0]['message']['text'] == "ส่ง"){
   $arrPostData['messages'][0]['stickerId'] = "3";
   
 }
+else if($arrJson['events'][0]['message']['text'] == "image"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "image";
+  $arrPostData['messages'][0]['originalContentUrl'] = "https://example.com/original.jpg";
+  $arrPostData['messages'][0]['previewImageUrl'] = "https://example.com/preview.jpg";
+  }
 //else if($arrJson['events'][0]['message']['text']){
  // $arr = str_split($arrJson['events'][0]['message']['text']);
       //foreach ($arr as $element) {
