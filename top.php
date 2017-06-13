@@ -135,8 +135,11 @@ else if (strpos($_msg, 'สอน') !== false) {
   }else{
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "sticker";
+    $arrPostData['messages'][0]['packageId'] = "1";
+    $arrPostData['messages'][0]['stickerId'] = "3";
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = '?? คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: สอน[คำถาม|คำตอบ]';
+    $arrPostData['messages'][0]['text'] = 'คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: สอน[คำถาม|คำตอบ]';
   }
 }
 
