@@ -48,12 +48,12 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
 else if($arrJson['events'][0]['message']['text'] == "striker"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "sticker";
+  $arrPostData['messages'][0]['type'] = "Sticker";
   $arrPostData['messages'][0]['packageId'] = "1";
   $arrPostData['messages'][0]['stickerId'] = "3";
   
 }
-else if($arrJson['events'][0]['message']['text'] == "image"){
+else if($arrJson['events'][0]['message']['text'] == "Image"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "image";
@@ -61,7 +61,7 @@ else if($arrJson['events'][0]['message']['text'] == "image"){
   $arrPostData['messages'][0]['previewImageUrl'] ="https://github.com/ABZsto/LINE-BOT-PHP-Starter/blob/master/src/pic/1234.jpg";
   }
 
-  else if($arrJson['events'][0]['message']['text'] == "location"){
+  else if($arrJson['events'][0]['message']['text'] == "Location"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "location";
