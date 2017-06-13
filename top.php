@@ -52,7 +52,7 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ :)คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: จดจำ(คำถาม:คำตอบ):)";
+  $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: จดจำ(คำถาม:คำตอบ)";
  
 }
 else if($arrJson['events'][0]['message']['text'] == "Striker"){
@@ -137,7 +137,7 @@ else if (strpos($_msg, 'จดจำ') !== false) {
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = ':)คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: จดจำ(คำถาม:คำตอบ):)';
+    $arrPostData['messages'][0]['text'] = 'คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: จดจำ(คำถาม:คำตอบ)';
   }
 }
 
