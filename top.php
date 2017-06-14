@@ -124,7 +124,9 @@ else if (strpos($_msg, 'จดจำ') !== false) {
     $arrPostData['messages'][0]['type'] = "text";
     $arrPostData['messages'][0]['text'] = 'ขอบคุณที่สอนฉัน';
   }
-}else{
+}
+
+else{
   if($isData >0){
    foreach($data as $rec){
     $arrPostData = array();
@@ -132,7 +134,9 @@ else if (strpos($_msg, 'จดจำ') !== false) {
     $arrPostData['messages'][0]['type'] = "text";
     $arrPostData['messages'][0]['text'] = $rec->answer;
    }
-  }else{
+  }
+
+  else{
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
 
@@ -154,5 +158,4 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
 echo "ผ่าน";
- 
 ?>
